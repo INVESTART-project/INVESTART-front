@@ -16,6 +16,6 @@ export class UserPageComponent implements OnInit {
     this.user = this.initUser()
   }
   initUser(): User {
-    return new User("Павел", "Гура", "Александрович", "neloh@gmail.com")
+    return new User("Павел", "Гура", "Александрович", "neloh@gmail.com", [1, 2, 8, 35])
   }
 }

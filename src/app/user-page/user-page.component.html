@@ -1,17 +1,15 @@
 <h1>Личный кабинет</h1>
 <fieldset>
     <legend>Мои данные</legend>
-    <p>Фамилия:   {{user.name2}}</p>
-    <p>Имя:   {{user.name1}}</p>
-    <p>Отчество:   {{user.name3}}</p>
-    <p>Почта:   {{user.email}}</p>
+    <p>Фамилия: {{user.name2}}</p>
+    <p>Имя: {{user.name1}}</p>
+    <p>Отчество: {{user.name3}}</p>
+    <p>Почта: {{user.email}}</p>
 </fieldset>
 <fieldset>
     <legend>Мои проекты</legend>
     <ul>
-        <li><a [routerLink]="['/project', '1']" routerLinkActive="active" ariaCurrentWhenActive="page">Проект 1</a>
-        </li>
-        <li><a [routerLink]="['/project', '2']" routerLinkActive="active" ariaCurrentWhenActive="page">Проект 2</a>
-        </li>
+        <li *ngFor="let projectID of user.projectIDList"><a [routerLink]="['/project', projectID]"
+                routerLinkActive="active" ariaCurrentWhenActive="page">Проект {{projectID}}</a></li>
     </ul>
 </fieldset>

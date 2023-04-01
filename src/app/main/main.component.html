@@ -1,12 +1,15 @@
-<h1>Investart</h1>
 <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
 <nav>
-    <ul>
-        <li><a routerLink="/main" routerLinkActive="active" ariaCurrentWhenActive="page">Main Component</a>
-        </li>
-        <li><a routerLink="/index" routerLinkActive="active" ariaCurrentWhenActive="page">Index
-                Component</a></li>
-    </ul>
+    <fieldset>
+        <legend>Страницы на проекты</legend>
+        <ul>
+            <li><a [routerLink]="['/project', '1']" routerLinkActive="active" ariaCurrentWhenActive="page">Проект 1</a>
+            </li>
+            <li><a [routerLink]="['/project', '2']" routerLinkActive="active" ariaCurrentWhenActive="page">Проект 2</a>
+            </li>
+            <li><a [routerLink]="['/project', '999']" routerLinkActive="active" ariaCurrentWhenActive="page">Проект
+                    99</a>
+            </li>
+        </ul>
+    </fieldset>
 </nav>
-<!-- The routed views render in the <router-outlet>-->
-<router-outlet></router-outlet>

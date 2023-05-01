@@ -1,0 +1,44 @@
+button.back {
+    position: absolute;
+    left: 2%;
+    right: 89.36%;
+    top: 13.35%;
+    bottom: 80.58%;
+
+    background: #74297D;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    font-family: 'Inter';
+    color: #FFAF51;
+
+}
+
+fieldset.projects {
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    left: 23%;
+    top: 15%; 
+
+    background: url('/assets/img/cyc9WB0JeJw.jpg');
+    background-size: cover;
+    mix-blend-mode: normal;
+    border-radius: 50px;
+}
+
+legend.project-head {
+    width: 158px;
+    height: 29px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    display: flex;
+    text-align: center;
+    
+    color: #000000;
+}

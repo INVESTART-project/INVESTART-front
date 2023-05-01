@@ -20,7 +20,7 @@ export class ProjectComponent implements OnInit {
     this.subscription = this.activateRoute.params.subscribe(params => this.id = params['id']);
     if (this.id > 99) {
       this.router.navigate(['/not-found'], {
-        // Don't change url
+        // Don't change url 
         skipLocationChange: true
         // Browser prev page fix
         // replaceUrl: true

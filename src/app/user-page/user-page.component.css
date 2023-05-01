@@ -14,12 +14,70 @@ button.back {
 
 }
 
+h1.header {
+    text-align: center;
+    font-family: 'Inter';
+}
+
+fieldset.profile {
+    position: absolute;
+    width: 20%;
+    height: 80%;
+    left: 5%;
+    top: 25%; 
+
+    border-radius: 50px;
+    border: none;
+
+    font-family: 'Inter';
+    font-size: 1.3em;
+}
+
+legend.profile {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+
+    font-family: 'Inter';
+    font-size: 1.4em;
+    font-weight: bold;
+    
+}
+
+div.avatar {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 65%;
+    height: 35%;
+    background-color: gray;
+}
+
+button.profile {
+    position: absolute;
+
+    width: 60%;
+    height: 7%;
+    top: 89%;
+    bottom: 20%;
+    
+    margin-left: 15%;
+    
+    background: #74297D;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    font-family: 'Inter';
+    color: #FFAF51;
+}
+
 fieldset.projects {
     position: absolute;
-    width: 40%;
-    height: 80%;
-    left: 23%;
-    top: 15%; 
+    width: 54%;
+    height: 85%;
+    left: 40%;
+    top: 19%; 
 
     background: url('/assets/img/cyc9WB0JeJw.jpg');
     background-size: cover;
@@ -27,18 +85,20 @@ fieldset.projects {
     border-radius: 50px;
 }
 
-legend.project-head {
-    width: 158px;
-    height: 29px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
+legend.projects {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8.5%;
 
-    display: flex;
-    text-align: center;
-    
-    color: #000000;
+    font-family: 'Inter';
+    font-size: 1.8em;
+    font-weight: bold;
 }
+
+ul.projects {
+    text-align: center;
+    /*list-style-image: ;*/
+    font-size: 2em;
+}
+

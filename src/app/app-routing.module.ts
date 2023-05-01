@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './main/main.component';
-import { UserPageComponent } from './user-page/user-page.component';
-import { ProjectComponent } from './project/project.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { MainComponent } from './components/main/main.component';
+import { UserPageComponent } from './components/user-page/user-page.component';
+import { ProjectComponent } from './components/project/project.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 

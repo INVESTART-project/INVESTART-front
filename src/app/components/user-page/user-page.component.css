@@ -14,17 +14,19 @@ button.back {
 
 }
 
-h1.header {
+.header {
     text-align: center;
     font-family: 'Inter';
+    font-size: 2.3em;
+    padding: 30px;
 }
 
-fieldset.profile {
+.profile-box {
     position: absolute;
     width: 20%;
     height: 80%;
     left: 5%;
-    top: 25%; 
+    top: 25%;
 
     border-radius: 50px;
     border: none;
@@ -42,7 +44,7 @@ legend.profile {
     font-family: 'Inter';
     font-size: 1.4em;
     font-weight: bold;
-    
+
 }
 
 div.avatar {
@@ -61,9 +63,9 @@ button.profile {
     height: 7%;
     top: 89%;
     bottom: 20%;
-    
+
     margin-left: 15%;
-    
+
     background: #74297D;
     border: 1px solid #000000;
     border-radius: 10px;
@@ -72,12 +74,12 @@ button.profile {
     color: #FFAF51;
 }
 
-fieldset.projects {
+.projects-box {
     position: absolute;
     width: 54%;
     height: 85%;
     left: 40%;
-    top: 19%; 
+    top: 23%;
 
     background: url('/assets/img/cyc9WB0JeJw.jpg');
     background-size: cover;
@@ -96,9 +98,10 @@ legend.projects {
     font-weight: bold;
 }
 
-ul.projects {
-    text-align: center;
+.project {
+    text-align: left;
+    padding: 10px;
+    padding-left: 50px;
     /*list-style-image: ;*/
     font-size: 2em;
 }
-

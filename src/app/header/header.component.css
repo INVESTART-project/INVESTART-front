@@ -1,34 +1,332 @@
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
+/* inter-regular - cyrillic_latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/inter-v12-cyrillic_latin-regular.woff') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('/assets/fonts/inter-v12-cyrillic_latin-regular.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
+.line {
+    height: 66px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: rgba(253, 137, 0, 0.7);
+}
+
+.name {
+    position: absolute;
+    left: 3.44%;
+    right: 85.2%;
+    top: 6.06%;
+    bottom: 13.64%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
     text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
+
+    color: #000000;
+}
+
+.search {
+    position: absolute;
+    left: 28.72%;
+    right: 65.76%;
+    top: 28.79%;
+    bottom: 27.27%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.stroke {
+    position: absolute;
+    left: 35.12%;
+    right: 41.28%;
+    top: 19.7%;
+    bottom: 19.7%;
+
+    background: #DCD9D9;
+    border-radius: 22px;
+}
+
+.button-find {
+    position: absolute;
+    left: 59.6%;
+    right: 33.92%;
+    top: 19.7%;
+    bottom: 19.7%;
+
+    background: #74297D;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.find {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+
+    margin: auto;
+    color: #FFAF51;
+}
+
+.button-sign-in {
+    position: absolute;
+    left: 75.36%;
+    right: 15.04%;
+    top: 19.7%;
+    bottom: 19.7%;
+
+    background: #74297D;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.sign-in {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+
+    margin: auto;
+    color: #FFAF51;
+}
+
+.button-profile {
+    position: absolute;
+    left: 86.72%;
+    right: 3.68%;
+    top: 19.7%;
+    bottom: 19.7%;
+
+    background: #74297D;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.profile {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+
+    margin: auto;
+    color: #FFAF51;
+}
+
+.main-box {
+    width: 1400px;
+    height: 294px;
+
+    position: relative;
+    top: 109px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image: url('/assets/img/cyc9WB0JeJw.jpg');
+    background-size: cover;
+    mix-blend-mode: normal;
+    border-radius: 50px;
+}
+
+.info {
+    position: absolute;
+    left: 8.55%;
+    right: 8.55%;
+    top: 7.82%;
+    bottom: 50%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+.button-create {
+    position: absolute;
+    left: 11.4%;
+    right: 60.97%;
+    top: 69.73%;
+    bottom: 13.27%;
+
+    background: #74297D;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.create {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    margin: auto;
+
+    color: #FFAF51;
+}
+
+.button-begin {
+    position: absolute;
+    left: 60.88%;
+    right: 11.49%;
+    top: 69.73%;
+    bottom: 13.27%;
+
+    background: rgba(255, 138, 1, 0.42);
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.begin {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    margin: auto;
+
+    color: rgba(69, 0, 215, 0.85);
+}
+
+.top-box {
+    position: relative;
+    width: 1400px;
+    height: 560px;
+    top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.proj-box {
+    position: absolute;
+    width: 790px;
+    height: 560px;
+    left: 0px;
+
+    background-image: url('/assets/img/cyc9WB0JeJw.jpg');
+    background-size: cover;
+    mix-blend-mode: normal;
+    border-radius: 50px;
+}
+
+.proj {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+
+    text-align: center;
+}
+
+.inv-box {
+    position: absolute;
+    width: 470px;
+    height: 560px;
+    right: 0px;
+
+    background-image: url('/assets/img/cyc9WB0JeJw.jpg');
+    background-size: cover;
+    mix-blend-mode: normal;
+    border-radius: 50px;
+}
+
+.inv {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+
+    text-align: center;
 }
 
 
-/* Right-aligned link */
-.navbar a.right {
-    float: right;
+
+.premium-box {
+    position: relative;
+    width: 1400px;
+    height: 294px;
+    top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image: url('/assets/img/cyc9WB0JeJw.jpg');
+    background-size: cover;
+    mix-blend-mode: normal;
+    border-radius: 50px;
 }
 
-/* Change color on hover */
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
+.premium-info {
+    position: absolute;
+    left: 9.5%;
+    right: 43.36%;
+    top: 15.65%;
+    bottom: 50%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
 }
 
-/* Active/current link */
-.navbar a.active {
-    background-color: #666;
-    color: white;
+.button-premium {
+    position: absolute;
+
+    left: 60.88%;
+    right: 11.49%;
+    top: 70.07%;
+    bottom: 12.93%;
+
+    background: rgba(255, 175, 81, 0.45);
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.premium {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    color: rgba(69, 0, 215, 0.85);
 }

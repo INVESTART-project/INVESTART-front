@@ -1,4 +1,7 @@
 <h1>Личный кабинет</h1>
+
+<button class="back">Назад</button>
+
 <fieldset>
     <legend>Мои данные</legend>
     <p>Фамилия: {{user.name2}}</p>
@@ -6,8 +9,8 @@
     <p>Отчество: {{user.name3}}</p>
     <p>Почта: {{user.email}}</p>
 </fieldset>
-<fieldset>
-    <legend>Мои проекты</legend>
+<fieldset class="projects">
+    <legend class="project-head">Мои проекты</legend>
     <ul>
         <li *ngFor="let projectID of user.projectIDList"><a [routerLink]="['/project', projectID]"
                 routerLinkActive="active" ariaCurrentWhenActive="page">Проект {{projectID}}</a></li>

@@ -1,0 +1,13 @@
+.root {
+    padding: 10%;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.box {
+    padding: 10px;
+    display: inline-block;
+    width: 400px;
+}

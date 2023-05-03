@@ -1,4 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/inter-v12-cyrillic_latin-regular.woff') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('/assets/fonts/inter-v12-cyrillic_latin-regular.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -9,4 +21,13 @@ body {
 
 .action {
     cursor: pointer;
+}
+
+.back-gradient {
+    background: linear-gradient(145deg, rgba(254, 172, 76, 1) 0%, rgba(116, 41, 124, 1) 100%);
+}
+
+.border {
+    border: 1px solid #555;
+    border-radius: 10px;
 }

@@ -1,0 +1,22 @@
+<div class="root">
+    <form class="box back-gradient border">
+        <div class="header">Вход</div>
+        <label class="row">Логин</label>
+        <input class="row border" type="text" [(ngModel)]="login" />
+        <label class="row">Пароль</label>
+        <input class="row border" type="password" [(ngModel)]="password" />
+        <div class="row">
+            <div class="buttons">
+                <button class="login button action border" (click)="login_user()">Вход</button>
+                <div class="button-space"></div>
+                <button class="register button action border" [routerLink]="'register'">
+                    Регистрация
+                </button>
+            </div>
+        </div>
+        <div *ngIf="is_login_valid==false" class="row warning border">
+            Неверный логин или пароль
+        </div>
+    </form>
+
+</div>

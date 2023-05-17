@@ -1,5 +1,26 @@
 <div class="root">
-    <div class="box back-gradient border">
+    <form class="box back-gradient border">
+        <div class="header">Регистрация</div>
+        <label class="row">Логин</label>
+        <input class="row border" type="text" [(ngModel)]="login" />
+        <label class="row">Почта</label>
+        <input class="row border" type="text" [(ngModel)]="email" />
+        <label class="row">Номер телефона</label>
+        <input class="row border" type="text" [(ngModel)]="phone_number" />
+        <label class="row">Пароль</label>
+        <input class="row border" type="password" [(ngModel)]="password" />
+        <label class="row">Повторите пароль</label>
+        <input class="row border" type="password" [(ngModel)]="password" />
+        <div class="row">
+            <div class="buttons">
+                <button class="register button action border" (click)="register_user()">
+                    Зарегистрироваться
+                </button>
+            </div>
+        </div>
+        <div *ngIf="false" class="row warning border">
+            Неверный логин или пароль
+        </div>
+    </form>
 
-    </div>
 </div>

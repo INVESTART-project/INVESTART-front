@@ -14,7 +14,8 @@
 <div class="projects-box">
     <div class="header">Мои проекты</div>
     <div class="projects">
-        <div class="project" *ngFor="let projectID of user.projectIDList"><a [routerLink]="['/project', projectID]"
-                routerLinkActive="active" ariaCurrentWhenActive="page">Проект {{projectID}}</a></div>
+        <div class="project border action cy" *ngFor="let projectID of user.projectIDList"><a
+                [routerLink]="['/project', projectID]" routerLinkActive="active" ariaCurrentWhenActive="page">Проект
+                {{projectID}}</a></div>
     </div>
 </div>

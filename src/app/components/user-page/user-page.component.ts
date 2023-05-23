@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/models/user';
+import { UserList } from 'src/app/models/user/user';
+import { UserService } from 'src/app/models/user/user.service';
 
 @Component({
   selector: 'app-user-page',
@@ -8,14 +9,15 @@ import { User } from 'src/app/models/user';
 })
 export class UserPageComponent implements OnInit {
 
-  user: User
+  user: UserList
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.user = this.initUser()
+    this.initUser()
   }
-  initUser(): User {
-    return new User("Павел", "Гура", "Александрович", "neloh@gmail.com", [1, 2, 8, 35])
+  initUser() {
+    this.userService.getUser()
+      .subscribe((data: UserList) => this.user = { ...data })
   }
 }

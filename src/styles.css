@@ -31,3 +31,13 @@ body {
     border: 1px solid #555;
     border-radius: 10px;
 }
+
+.cy {
+    color: rgb(155, 69, 165);
+    background-color: rgb(254, 172, 76);
+}
+
+.cf {
+    color: hsl(32, 99%, 65%);
+    background-color: rgb(155, 69, 165);
+}

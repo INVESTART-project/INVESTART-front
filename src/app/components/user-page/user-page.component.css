@@ -65,4 +65,8 @@ button.profile {
     padding-left: 50px;
     /*list-style-image: ;*/
     font-size: 2em;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

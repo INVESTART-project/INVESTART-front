@@ -28,6 +28,10 @@ export class LoginComponent {
     }
   }
 
+  reg_redirect() {
+    this.router.navigate(['/reg'])
+  }
+
   check_login(): boolean {
     // boilerplate
     if (false) {

@@ -4,16 +4,16 @@
     <div class="header">Мои данные</div>
     <div class="avatar"></div>
     <div class="profile">
-        <p>Имя: {{user[0].username}}</p>
-        <p>Почта: {{user[0].email}}</p>
-        <p>Номер: {{user[0].phoneNumber}}</p>
+        <p>Имя: {{"Иван"}}</p>
+        <p>Почта: {{"q@gmail.com"}}</p>
+        <p>Номер: {{"123456789"}}</p>
     </div>
-    <button class="profile">Редактировать профиль</button>
+    <button class="profile button action border cf">Редактировать профиль</button>
 </div>
 <div class="projects-box">
     <div class="header">Мои проекты</div>
     <div class="projects">
-        <div class="project" *ngFor="let projectID of ['бла', 'два' , 'nhb']"><a [routerLink]="['/project', projectID]"
+        <div class="project" *ngFor="let projectID of ['бла', 'два' , '123']"><a [routerLink]="['/project', projectID]"
                 routerLinkActive="active" ariaCurrentWhenActive="page">Проект
                 {{projectID}}</a></div>
     </div>

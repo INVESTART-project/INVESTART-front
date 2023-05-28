@@ -35,9 +35,26 @@ body {
 .cy {
     color: rgb(155, 69, 165);
     background-color: rgb(254, 172, 76);
+    padding: 0px 20px 0px 20px;
 }
 
 .cf {
     color: hsl(32, 99%, 65%);
     background-color: rgb(155, 69, 165);
+    padding: 0px 20px 0px 20px;
+}
+
+.font_small {
+    font-family: 'Inter';
+    font-size: 1em;
+}
+
+.font_normal {
+    font-family: 'Inter';
+    font-size: 1.5em;
+}
+
+.font_big {
+    font-family: 'Inter';
+    font-size: 3em;
 }

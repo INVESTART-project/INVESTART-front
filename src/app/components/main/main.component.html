@@ -16,15 +16,17 @@
 </nav>
 -->
 <div class="main-box">
-    <div class="info">Краудфандинговая платформа
-        для IT проектов Инвестируйте с выгодой или
+    <div class="info_h font_big">Краудфандинговая платформа
+        для IT проектов</div>
+    <div class="info font_normal">Инвестируйте с выгодой или
         публикуйте сюда идеи стартапов для
-        финасирования</div>
-    <button class="button-create">
-        <div class="create">Создать проект</div>
+        финасирования.</div>
+    <button class="button-create button action border cf font_normal">
+        Создать проект
     </button>
-    <button class="button-begin">
-        <div class="begin">Начать инвестировать</div>
+    <button class="button-begin button action border cy font_normal" [routerLink]="['/projects']"
+        routerLinkActive="active">
+        Начать инвестировать
     </button>
 </div>
 

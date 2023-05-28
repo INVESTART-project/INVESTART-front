@@ -31,19 +31,11 @@ div.avatar {
 button.profile {
     position: absolute;
 
-    width: 60%;
-    height: 7%;
     top: 89%;
     bottom: 10%;
-
+    font-size: 2ex;
     margin-left: 15%;
-
-    background: #74297D;
-    border: 1px solid #000000;
-    border-radius: 10px;
-
-    font-family: 'Inter';
-    color: #FFAF51;
+    height: fit-content;
 }
 
 .projects-box {

@@ -6,30 +6,23 @@
     margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
-
     background-image: url('/assets/img/cyc9WB0JeJw.jpg');
     background-size: cover;
     mix-blend-mode: normal;
     border-radius: 50px;
+
+    padding: 20px 20px 100px 100px;
 }
 
 .info {
-    position: absolute;
-    left: 8.55%;
-    right: 8.55%;
-    top: 7.82%;
-    bottom: 50%;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 48px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
+    text-align: justify;
     color: #000000;
+}
+
+.info_h {
+    text-align: center;
+    color: #000000;
+    padding-bottom: 20px;
 }
 
 .button-create {
@@ -38,10 +31,6 @@
     right: 60.97%;
     top: 69.73%;
     bottom: 13.27%;
-
-    background: #74297D;
-    border: 1px solid #000000;
-    border-radius: 10px;
 }
 
 .create {
@@ -63,10 +52,6 @@
     right: 11.49%;
     top: 69.73%;
     bottom: 13.27%;
-
-    background: rgba(255, 138, 1, 0.42);
-    border: 1px solid #000000;
-    border-radius: 10px;
 }
 
 .begin {

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Router } from "@angular/router"
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -11,20 +12,54 @@ import { Router } from "@angular/router"
 })
 export class ProjectComponent implements OnInit {
 
-  id!: number
+  id: number
+  project: any
+  date: string
+  role: string | null
   private subscription: Subscription
 
-  constructor(private activateRoute: ActivatedRoute, private router: Router) { }
+  constructor(private http: HttpClient, private activateRoute: ActivatedRoute, private router: Router) {
+  }
+
+  donate() {
+    console.log(Number(this.id))
+    console.log(localStorage.getItem("user_id"))
+    if (this.role == '1') {
+      let money = Number(prompt('Введите количество средств'));
+      const body = {
+        id_Startup: Number(this.id),
+        id_User: Number(localStorage.getItem("user_id")),
+        transMoney: money,
+      };
+      this.http.post('http://localhost:8080/invest/donate', body).subscribe({
+        next: (data: any) => {
+          alert('Средства успешно переведены!')
+          this.update()
+        },
+        error: error => { console.log(error); }
+      });
+    }
+  }
+
+  update() {
+    this.role = localStorage.getItem("role")
+    this.subscription = this.activateRoute.params.subscribe(params => this.id = params['id']);
+    this.http.get('http://localhost:8080/startup/' + this.id).subscribe({
+      next: (data: any) => {
+        if (data == null) {
+          this.router.navigate(['/not-found'], {
+            skipLocationChange: true
+          })
+        }
+        this.project = data
+        this.date = new Date(data['endDate']).toLocaleDateString()
+      },
+      error: error => { console.log(error); }
+    });
+  }
 
   ngOnInit(): void {
-    this.subscription = this.activateRoute.params.subscribe(params => this.id = params['id']);
-    if (this.id > 99) {
-      this.router.navigate(['/not-found'], {
-        // Don't change url 
-        skipLocationChange: true
-        // Browser prev page fix
-        // replaceUrl: true
-      })
-    }
+    this.update()
+
   }
 }

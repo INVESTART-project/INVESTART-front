@@ -1,7 +1,4 @@
 .header {
-    text-align: center;
-    font-family: 'Inter';
-    font-size: 2.3em;
     padding: 30px;
 }
 
@@ -10,10 +7,10 @@
     width: 20%;
     height: 80%;
     left: 5%;
-    top: 25%;
+    top: 23%;
 
     border-radius: 50px;
-    border: none;
+    padding: 50px;
 
     font-family: 'Inter';
     font-size: 1.3em;
@@ -23,8 +20,8 @@ div.avatar {
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    width: 65%;
-    height: 35%;
+    width: 200pt;
+    height: 200pt;
     background-color: gray;
 }
 
@@ -41,11 +38,10 @@ button.profile {
 .projects-box {
     position: absolute;
     width: 54%;
-    height: 85%;
+    height: 80%;
     left: 40%;
     top: 23%;
 
-    background: url('/assets/img/cyc9WB0JeJw.jpg');
     background-size: cover;
     mix-blend-mode: normal;
     border-radius: 50px;
@@ -61,4 +57,23 @@ button.profile {
     margin-left: 10%;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.header {
+    text-align: center;
+}
+
+.pblock {
+    padding: 10px;
+    background-color: white;
+}
+
+.ph {
+    font-family: 'Inter';
+    font-size: 24pt;
+}
+
+.pt {
+    font-family: 'Inter';
+    font-size: 15pt;
 }

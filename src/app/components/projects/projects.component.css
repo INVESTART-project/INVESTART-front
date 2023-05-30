@@ -1,0 +1,46 @@
+.root {
+    padding: 50px;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.projects-box {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    width: 80%;
+}
+
+.project {
+    text-align: left;
+    padding: 10px;
+    padding-left: 50px;
+    /*list-style-image: ;*/
+    font-size: 2em;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header {
+    text-align: center;
+}
+
+.pblock {
+    padding: 10px;
+    background-color: white;
+}
+
+.ph {
+    font-family: 'Inter';
+    font-size: 24pt;
+}
+
+.pt {
+    font-family: 'Inter';
+    font-size: 15pt;
+}

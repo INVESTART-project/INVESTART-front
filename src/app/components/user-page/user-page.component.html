@@ -1,20 +1,25 @@
-<div class="header">Личный кабинет</div>
+<div class="header font_big">Личный кабинет</div>
 
-<div class="profile-box">
-    <div class="header">Мои данные</div>
+<div class="profile-box back-gradient border">
+    <div class="header font_big">Мои данные</div>
     <div class="avatar"></div>
     <div class="profile">
-        <p>Имя: {{"Иван"}}</p>
-        <p>Почта: {{"q@gmail.com"}}</p>
-        <p>Номер: {{"123456789"}}</p>
+        <p>Имя: {{this.user["username"]}}</p>
+        <p>Почта: {{this.user["email"]}}</p>
+        <p>Номер: {{this.user["phoneNumber"]}}</p>
     </div>
-    <button class="profile button action border cf">Редактировать профиль</button>
+    <button class="profile button action border cf" [routerLink]="['/login']" routerLinkActive="active">Выйти</button>
 </div>
-<div class="projects-box">
-    <div class="header">Мои проекты</div>
+<div class="sh_big projects-box back-gradient border">
+    <div *ngIf='this.role=="1"' class="header font_big">Мои инвестиции</div>
+    <div *ngIf='this.role=="2"' class="header font_big">Мои стартапы</div>
     <div class="projects">
-        <div class="project" *ngFor="let projectID of ['бла', 'два' , '123']"><a [routerLink]="['/project', projectID]"
-                routerLinkActive="active" ariaCurrentWhenActive="page">Проект
-                {{projectID}}</a></div>
+        <div class="project" *ngFor="let project of this.projects">
+            <div class="sh_big pblock border action" [routerLink]="['/project', project['id']]"
+                routerLinkActive="active" ariaCurrentWhenActive="page">
+                <div class="ph">Проект {{project['name']}}</div>
+                <div class="pt">{{project['description']}}</div>
+            </div>
+        </div>
     </div>
 </div>

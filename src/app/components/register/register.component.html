@@ -2,25 +2,31 @@
     <form class="box back-gradient border">
         <div class="header">Регистрация</div>
         <label class="row">Логин</label>
-        <input class="row border" type="text" [(ngModel)]="login" />
+        <input class="row border" type="text" name="login" [(ngModel)]="login" />
         <label class="row">Почта</label>
-        <input class="row border" type="text" [(ngModel)]="email" />
+        <input class="row border" type="text" name="email" [(ngModel)]="email" />
         <label class="row">Номер телефона</label>
-        <input class="row border" type="text" [(ngModel)]="phone_number" />
+        <input class="row border" type="text" name="phone_number" [(ngModel)]="phone_number" />
         <label class="row">Пароль</label>
-        <input class="row border" type="password" [(ngModel)]="password" />
+        <input class="row border" type="password" name="password1" [(ngModel)]="password1" />
         <label class="row">Повторите пароль</label>
-        <input class="row border" type="password" [(ngModel)]="password" />
+        <input class="row border" type="password" name="password2" [(ngModel)]="password2" />
+        <label class="row">Разработчик</label>
+        <label class="row switch">
+            <input type="checkbox" name="dev" [(ngModel)]="dev">
+            <span class="slider round"></span>
+        </label>
         <div class="row">
             <div class="buttons">
-                <button class="register button action border" (click)="register_user()">
+                <button class="sh_sm register button action border" (click)="register_user()">
                     Зарегистрироваться
                 </button>
             </div>
         </div>
-        <div *ngIf="false" class="row warning border">
-            Неверный логин или пароль
+        <div *ngIf="this.regerr" class="sh_sm row warning border">
+            Неверные данные регистрации
         </div>
+
     </form>
 
 </div>

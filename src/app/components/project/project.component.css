@@ -18,15 +18,27 @@
 }
 
 .name {
-    font-family: 'Inter';    
+    font-family: 'Inter';
     font-weight: bold;
-    font-size: 2em;
+    font-size: 30pt;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
-.author, .rating, .collect, .tern {    
+.rating,
+.collect,
+.tern {
     font-family: 'Inter';
     font-weight: 400;
     font-size: 1.5em;
+}
+
+.author {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 15pt;
+    margin-top: 0px;
+    margin-bottom: 200px;
 }
 
 .collect::first-line {

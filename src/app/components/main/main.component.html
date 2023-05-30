@@ -15,14 +15,15 @@
     </fieldset>
 </nav>
 -->
-<div class="main-box">
+<div class="sh_big main-box back-gradient">
     <div class="info_h font_big">Краудфандинговая платформа
-        для IT проектов</div>
+        для IT стартапов</div>
     <div class="info font_normal">Инвестируйте с выгодой или
         публикуйте сюда идеи стартапов для
         финасирования.</div>
-    <button class="button-create button action border cf font_normal">
-        Создать проект
+    <button class="button-create button action border cf font_normal" [routerLink]="['/new-project']"
+        routerLinkActive="active">
+        Создать стартап
     </button>
     <button class="button-begin button action border cy font_normal" [routerLink]="['/projects']"
         routerLinkActive="active">
@@ -31,18 +32,35 @@
 </div>
 
 <div class="top-box">
-    <div class="proj-box">
-        <div class="proj">Самы популярные проекты</div>
+    <div class="sh_big proj-box back-gradient">
+        <div class="proj font_big">Самые популярные стартап</div>
+        <div class="projects">
+            <div class="sh_big project" *ngFor="let project of this.projects">
+                <div class="pblock border action" [routerLink]="['/project', project['id']]" routerLinkActive="active"
+                    ariaCurrentWhenActive="page">
+                    <div class="ph">Проект {{project['name']}}</div>
+                    <div class="pt">{{project['description']}}</div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="inv-box">
-        <div class="inv">Лучшие инвесторы</div>
+    <div class="sh_big inv-box back-gradient">
+        <div class="inv font_big">Топ инвесторы</div>
+        <div class="projects">
+            <div class="sh_big project" *ngFor="let investor of this.investors">
+                <div class="pblock border">
+                    <div class="ph">{{investor['username']}}</div>
+                    <div class="pt">{{investor['email']}}</div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="premium-box">
-    <div class="premium-info">Хотите чтобы ваш стартап заметили?
+<div class="sh_big premium-box back-gradient">
+    <div class="premium-info font_big">Хотите чтобы ваш стартап заметили?
         Тогда наша премиум-подписка для вас!</div>
-    <button class="button-premium">
-        <div class="premium">Оформить подписку</div>
+    <button class="button-premium button cy border font_normal">
+        Оформить подписку
     </button>
 </div>

@@ -52,6 +52,18 @@
     height: 45px;
 }
 
+textarea {
+    background-color: white;
+    width: calc(100% - 60px);
+    height: 45px;
+    padding-left: 30px;
+    font-family: 'Inter';
+    font-size: 3ex;
+    resize: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 10px;
+}
+
 input {
     background-color: white;
     width: calc(100% - 60px);
@@ -139,4 +151,10 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+.more {
+    min-height: 300px;
+    height: fit-content;
+    text-align: justify;
 }

@@ -6,8 +6,8 @@ import { ProjectComponent } from './components/project/project.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-
-import { ProjectsComponent } from './projects/projects.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { NewProjectComponent } from './components/new-project/new-project.component';
 
 
 
@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'reg', component: RegisterComponent, title: 'Регистрация' },
   { path: 'project/:id', component: ProjectComponent, title: 'Страница проекта' },
   { path: 'projects', component: ProjectsComponent, title: 'Проекты' },
+  { path: 'new-project', component: NewProjectComponent, title: 'Создать новый стартап' },
   { path: '**', component: NotFoundComponent, title: 'Page not found' },
 ];
 

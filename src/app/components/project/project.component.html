@@ -1,26 +1,20 @@
 <div class="img-box"> </div>
 
-<div class="name-box"> 
-    <p class="name">Умный сервис для управления финансами и инвестициями</p>
-    <p class="author">Иван Иванов</p>
-    <p class="rating">Рейтинг: 4.57 из 5</p>
-    <p class="collect">Собрано 550 000 руб.<br>из 1 000 000 руб.</p>
-    <p class="tern">Осталось 15 дней</p>
-
-    <button class="invest">Инвестировать</button>
+<div class="name-box">
+    <p class="name">{{project['name']}}</p>
+    <p class="author">Автор {{project['author']['user']['username']}}-{{project['author']['user']['email']}}</p>
+    <p class="rating">Рейтинг: {{project['author']['rating']}} из 5</p>
+    <p class="collect">Собрано {{project['currentMoney']}} руб. из {{project['needMoney']}} руб.</p>
+    <p class="tern">Дата окончания сборов {{date}}</p>
+    <button *ngIf="this.role=='1'" class="action invest" (click)="donate()">Инвестировать</button>
 </div>
 
-<div class="description-box"> 
+<div class="description-box">
     <p class="header">Описание проекта</p>
-    <p class="content">UniCash в игровой форме поможет научиться финансовой грамотности<br>
-        Главный навык, который вы приобретёте – умение откладывать часть денег и вкладывать их в актив.<br>Со временем актив начнёт работать на вас, создавая пассивный доход.
-        Даже если в бизнесе есть бухгалтер, он не поможет грамотно инвестировать и отслеживать все личные финансы в одном месте.
-        Наглядная статистика прошлых месяцев и контроль сегодняшних дней - это очень важная вещь для выстраивания стратегии завтрашнего дня.
-        Чтобы не забывать сразу учитывать все затраты и вложения, нужен сервис, который всегда под рукой.
-        Без финансовой грамотности попросту не добиться высоких результатов. </p>
+    <p class="content">{{project['description']}}</p>
 </div>
 
-<div class="news-box"> 
+<div *ngIf="false" class="news-box">
     <p class="header">Новости проекта:</p>
     <div class="news">
         <p class="header">Итоги и цели</p>

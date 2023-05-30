@@ -13,7 +13,8 @@ import { UserPageComponent } from './components/user-page/user-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserService } from './models/user/user.service';
-import { ProjectsComponent } from './projects/projects.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { NewProjectComponent } from './components/new-project/new-project.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProjectsComponent } from './projects/projects.component';
     UserPageComponent,
     LoginComponent,
     RegisterComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    NewProjectComponent
   ],
   imports: [
     BrowserModule,

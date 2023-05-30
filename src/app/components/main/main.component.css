@@ -6,7 +6,6 @@
     margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url('/assets/img/cyc9WB0JeJw.jpg');
     background-size: cover;
     mix-blend-mode: normal;
     border-radius: 50px;
@@ -70,8 +69,9 @@
 .top-box {
     position: relative;
     width: 1400px;
-    height: 560px;
-    top: 200px;
+    min-height: 560px;
+    height: fit-content;
+    top: 100px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -79,43 +79,35 @@
 .proj-box {
     position: absolute;
     width: 790px;
-    height: 560px;
+    height: 100%;
     left: 0px;
 
-    background-image: url('/assets/img/cyc9WB0JeJw.jpg');
     background-size: cover;
     mix-blend-mode: normal;
     border-radius: 50px;
+    padding: 50px;
 }
 
 .proj {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .inv-box {
     position: absolute;
     width: 470px;
-    height: 560px;
+    height: 100%;
     right: 0px;
 
-    background-image: url('/assets/img/cyc9WB0JeJw.jpg');
     background-size: cover;
     mix-blend-mode: normal;
     border-radius: 50px;
+    padding: 50px;
 }
 
 .inv {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-
     text-align: center;
+    padding-bottom: 20px;
 }
 
 
@@ -124,11 +116,10 @@
     position: relative;
     width: 1400px;
     height: 294px;
-    top: 300px;
+    top: 150px;
     margin-left: auto;
     margin-right: auto;
 
-    background-image: url('/assets/img/cyc9WB0JeJw.jpg');
     background-size: cover;
     mix-blend-mode: normal;
     border-radius: 50px;
@@ -141,11 +132,6 @@
     top: 15.65%;
     bottom: 50%;
 
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 39px;
     display: flex;
     align-items: center;
 
@@ -160,18 +146,26 @@
     top: 70.07%;
     bottom: 12.93%;
 
-    background: rgba(255, 175, 81, 0.45);
-    border: 1px solid #000000;
-    border-radius: 10px;
 }
 
-.premium {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
 
-    color: rgba(69, 0, 215, 0.85);
+.header {
+    text-align: center;
+}
+
+.pblock {
+    padding: 10px;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ph {
+    font-family: 'Inter';
+    font-size: 24pt;
+}
+
+.pt {
+    font-family: 'Inter';
+    font-size: 15pt;
 }

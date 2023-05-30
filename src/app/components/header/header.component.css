@@ -5,7 +5,7 @@
     right: 0%;
     top: 0%;
     bottom: 0%;
-    background: rgba(253, 137, 0, 0.7);
+    background: rgb(228, 153, 68)
 }
 
 .name {
@@ -16,10 +16,7 @@
     bottom: 13.64%;
 
     font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 30pt;
     display: flex;
     align-items: center;
     text-align: center;
@@ -29,7 +26,7 @@
 
 .search {
     position: absolute;
-    left: 28.72%;
+    left: 30.72%;
     right: 65.76%;
     top: 28.79%;
     bottom: 27.27%;
@@ -52,8 +49,9 @@
     top: 19.7%;
     bottom: 19.7%;
 
-    background: #DCD9D9;
-    border-radius: 22px;
+    background: white;
+    height: 40px;
+    width: 450px;
 }
 
 .button-find {
@@ -62,21 +60,6 @@
     right: 33.92%;
     top: 19.7%;
     bottom: 19.7%;
-
-    background: #74297D;
-    border: 1px solid #000000;
-    border-radius: 10px;
-}
-
-.find {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-
-    margin: auto;
-    color: #FFAF51;
 }
 
 .button-sign-in {
@@ -108,19 +91,4 @@
     right: 3.68%;
     top: 19.7%;
     bottom: 19.7%;
-
-    background: #74297D;
-    border: 1px solid #000000;
-    border-radius: 10px;
-}
-
-.profile {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-
-    margin: auto;
-    color: #FFAF51;
 }

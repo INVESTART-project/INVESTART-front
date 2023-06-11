@@ -1,23 +1,43 @@
-<div class="img-box"> </div>
+<div class="img-box round sh_big"> </div>
 
-<div class="name-box">
+<div class="name-box round back-gradient sh_big">
     <p class="name">{{project['name']}}</p>
-    <p class="author">Автор {{project['author']['user']['username']}}-{{project['author']['user']['email']}}</p>
     <p class="rating">Рейтинг: {{project['author']['rating']}} из 5</p>
     <p class="collect">Собрано {{project['currentMoney']}} руб. из {{project['needMoney']}} руб.</p>
     <p class="tern">Дата окончания сборов {{date}}</p>
-    <button *ngIf="this.role=='1'" class="action invest" (click)="donate()">Инвестировать</button>
+    <p class="author">Автор {{project['author']['user']['username']}}-<a
+            [href]="'mailto:'+project['author']['user']['email']">{{project['author']['user']['email']}}</a>
+    </p>
+    <button *ngIf="this.role=='1'" class="cf border action invest" (click)="window_open()">Инвестировать</button>
 </div>
 
-<div class="description-box">
-    <p class="header">Описание проекта</p>
-    <p class="content">{{project['description']}}</p>
+<div class="description-box back-gradient sh_big round">
+    <p class="header font_big">Описание проекта</p>
+    <p class="content font_normal">{{project['description']}}</p>
 </div>
 
 <div *ngIf="false" class="news-box">
-    <p class="header">Новости проекта:</p>
+    <p class="header font_big">Новости проекта:</p>
     <div class="news">
         <p class="header">Итоги и цели</p>
         <p class="content">Давайте поговорим про будущее и уже достигнутые цели.</p>
     </div>
+</div>
+
+<div *ngIf="this.window" class="root">
+    <form class="box back-gradient rounds sh_big">
+        <div class="header">Инвестировать</div>
+        <label class="row">Сумма</label>
+        <input class="row border" type="number" name="password" [(ngModel)]="sum" />
+        <div class="row">
+            <div class="buttons">
+                <button class="sh_sm login button action border cy" (click)="donate()">Инвестировать</button>
+                <div class="button-space"></div>
+                <button class="sh_sm register button action border cf" (click)="window_open()">
+                    Отмена
+                </button>
+            </div>
+        </div>
+    </form>
+
 </div>

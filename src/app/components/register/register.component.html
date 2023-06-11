@@ -1,5 +1,5 @@
 <div class="root">
-    <form class="box back-gradient border">
+    <form class="box back-gradient rounds sh_big">
         <div class="header">Регистрация</div>
         <label class="row">Логин</label>
         <input class="row border" type="text" name="login" [(ngModel)]="login" />
@@ -23,7 +23,7 @@
                 </button>
             </div>
         </div>
-        <div *ngIf="this.regerr" class="sh_sm row warning border">
+        <div *ngIf="this.regerr" class="sh_sm row warning border hoversh">
             Неверные данные регистрации
         </div>
 

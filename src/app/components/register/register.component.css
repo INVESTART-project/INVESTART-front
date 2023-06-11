@@ -6,6 +6,10 @@
     -webkit-box-align: center;
 }
 
+input:focus {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
 .box {
     padding: 10px;
     display: inline-block;
@@ -78,7 +82,6 @@ label.row {
     font-family: 'Inter';
 }
 
-/* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
@@ -86,14 +89,12 @@ label.row {
     height: 34px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* The slider */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -126,13 +127,16 @@ input:focus+.slider {
     box-shadow: 0 0 1px rgb(155, 69, 165);
 }
 
+.switch:focus {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
 input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
     border-radius: 34px;
 }

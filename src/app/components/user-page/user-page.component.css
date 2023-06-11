@@ -10,10 +10,9 @@
     top: 23%;
 
     border-radius: 50px;
-    padding: 50px;
 
-    font-family: 'Inter';
-    font-size: 1.3em;
+    padding: 50px;
+    padding-top: 0px;
 }
 
 div.avatar {

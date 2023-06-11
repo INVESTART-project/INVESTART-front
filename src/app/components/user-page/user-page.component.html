@@ -1,16 +1,17 @@
 <div class="header font_big">Личный кабинет</div>
 
-<div class="profile-box back-gradient border">
+<div class="profile-box back-gradient sh_big">
     <div class="header font_big">Мои данные</div>
     <div class="avatar"></div>
-    <div class="profile">
+    <div class="profile font_normal">
         <p>Имя: {{this.user["username"]}}</p>
         <p>Почта: {{this.user["email"]}}</p>
         <p>Номер: {{this.user["phoneNumber"]}}</p>
     </div>
-    <button class="profile button action border cf" [routerLink]="['/login']" routerLinkActive="active">Выйти</button>
+    <button class="sh_sm cf button border action font_normal" [routerLink]="['/login']"
+        routerLinkActive="active">Выйти</button>
 </div>
-<div class="sh_big projects-box back-gradient border">
+<div class="sh_big projects-box back-gradient ">
     <div *ngIf='this.role=="1"' class="header font_big">Мои инвестиции</div>
     <div *ngIf='this.role=="2"' class="header font_big">Мои стартапы</div>
     <div class="projects">

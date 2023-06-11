@@ -21,6 +21,31 @@ body {
 
 .action {
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.action:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.hoversh {
+    transition: 0.3s;
+}
+
+.hoversh:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.round {
+    border-radius: 50px;
+}
+
+.rounds {
+    border-radius: 20px;
+}
+
+input:focus {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .back-gradient {

@@ -13,6 +13,8 @@ import { HttpClient } from '@angular/common/http';
 export class ProjectComponent implements OnInit {
 
   id: number
+  sum: number
+  window: boolean = false
   project: any
   date: string
   role: string | null
@@ -21,23 +23,31 @@ export class ProjectComponent implements OnInit {
   constructor(private http: HttpClient, private activateRoute: ActivatedRoute, private router: Router) {
   }
 
+  window_open() {
+    this.window = !this.window
+  }
+
   donate() {
     console.log(Number(this.id))
     console.log(localStorage.getItem("user_id"))
     if (this.role == '1') {
-      let money = Number(prompt('Введите количество средств'));
-      const body = {
-        id_Startup: Number(this.id),
-        id_User: Number(localStorage.getItem("user_id")),
-        transMoney: money,
-      };
-      this.http.post('http://localhost:8080/invest/donate', body).subscribe({
-        next: (data: any) => {
-          alert('Средства успешно переведены!')
-          this.update()
-        },
-        error: error => { console.log(error); }
-      });
+      let money = this.sum;
+      if (money != 0) {
+        const body = {
+          id_Startup: Number(this.id),
+          id_User: Number(localStorage.getItem("user_id")),
+          transMoney: money,
+        };
+        this.http.post('http://localhost:8080/invest/donate', body).subscribe({
+          next: (data: any) => {
+            this.window = false
+            alert('Средства успешно переведены!')
+
+            this.update()
+          },
+          error: error => { console.log(error); }
+        });
+      }
     }
   }
 

@@ -1,11 +1,11 @@
 <div class="root">
     <div class="sh_big projects-box round back-gradient">
-        <div class="header font_big">Проекты</div>
+        <div class="header font_big">Стартапы</div>
         <div class="projects">
             <div class="project" *ngFor="let project of this.projects">
                 <div class="sh_big pblock border action" [routerLink]="['/project', project['id']]"
                     routerLinkActive="active" ariaCurrentWhenActive="page">
-                    <div class="ph">Проект {{project['name']}}</div>
+                    <div class="ph">{{project['name']}}</div>
                     <div class="pt">{{project['description']}}</div>
                 </div>
             </div>

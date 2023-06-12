@@ -1,20 +1,3 @@
-<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
-<!--
-<nav>
-    <fieldset>
-        <legend>Страницы на проекты</legend>
-        <ul>
-            <li><a [routerLink]="['/project', '1']" routerLinkActive="active" ariaCurrentWhenActive="page">Проект 1</a>
-            </li>
-            <li><a [routerLink]="['/project', '2']" routerLinkActive="active" ariaCurrentWhenActive="page">Проект 2</a>
-            </li>
-            <li><a [routerLink]="['/project', '999']" routerLinkActive="active" ariaCurrentWhenActive="page">Проект
-                    99</a>
-            </li>
-        </ul>
-    </fieldset>
-</nav>
--->
 <div class="sh_big main-box back-gradient">
     <div class="info_h font_big">Краудфандинговая платформа
         для IT стартапов</div>
@@ -33,12 +16,12 @@
 
 <div class="top-box">
     <div class="sh_big proj-box back-gradient">
-        <div class="proj font_big">Самые популярные стартап</div>
+        <div class="proj font_big">Самые популярные стартапы</div>
         <div class="projects">
             <div class="sh_big project" *ngFor="let project of this.projects">
                 <div class="pblock border action" [routerLink]="['/project', project['id']]" routerLinkActive="active"
                     ariaCurrentWhenActive="page">
-                    <div class="ph">Проект {{project['name']}}</div>
+                    <div class="ph">{{project['name']}}</div>
                     <div class="pt">{{project['description']}}</div>
                 </div>
             </div>

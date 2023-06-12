@@ -16,8 +16,8 @@ const routes: Routes = [
   { path: 'user-profile', component: UserPageComponent, title: 'Личный кабинет' },
   { path: 'login', component: LoginComponent, title: 'Вход' },
   { path: 'reg', component: RegisterComponent, title: 'Регистрация' },
-  { path: 'project/:id', component: ProjectComponent, title: 'Страница проекта' },
-  { path: 'projects', component: ProjectsComponent, title: 'Проекты' },
+  { path: 'project/:id', component: ProjectComponent, title: 'Страница стартапа' },
+  { path: 'projects', component: ProjectsComponent, title: 'Стартапы' },
   { path: 'new-project', component: NewProjectComponent, title: 'Создать новый стартап' },
   { path: '**', component: NotFoundComponent, title: 'Page not found' },
 ];

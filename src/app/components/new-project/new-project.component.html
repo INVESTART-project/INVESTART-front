@@ -1,7 +1,7 @@
 <div class="root">
     <form class="box back-gradient rounds sh_big">
-        <div class="header">Новый проект</div>
-        <label class="row">Имя проекта</label>
+        <div class="header">Новый стартап</div>
+        <label class="row">Имя стартапа</label>
         <input class="row border" type="text" name="name" [(ngModel)]="name" />
         <label class="row">Описание</label>
         <textarea class="row border more" type="text" name="desc" [(ngModel)]="desc"></textarea>
@@ -12,12 +12,12 @@
         <div class="row">
             <div class="buttons">
                 <button class="sh_sm register button action border" (click)="create_project()">
-                    Создать проект
+                    Создать стартап
                 </button>
             </div>
         </div>
         <div *ngIf="this.prerr" class="sh_sm row warning border hoversh">
-            Неверные данные для нового проекта
+            Неверные данные для нового стартапа
         </div>
 
     </form>

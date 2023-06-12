@@ -39,7 +39,9 @@ export class NewProjectComponent {
     }
     console.log("123")
     this.role = localStorage.getItem("role")
+    console.log(this.role)
     let id = localStorage.getItem("user_id");
+    console.log(id)
     if (this.role == '2') {// if user is dev load his projects
       this.http.get("http://localhost:8080/auth/devByUID/" + id).subscribe({
         next: (dev: any) => {

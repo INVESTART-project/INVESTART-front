@@ -3,6 +3,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Router } from "@angular/router"
 import { HttpClient } from '@angular/common/http';
+import { Title } from "@angular/platform-browser";
 
 
 @Component({
@@ -20,7 +21,7 @@ export class ProjectComponent implements OnInit {
   role: string | null
   private subscription: Subscription
 
-  constructor(private http: HttpClient, private activateRoute: ActivatedRoute, private router: Router) {
+  constructor(private http: HttpClient, private activateRoute: ActivatedRoute, private router: Router, private titleService: Title) {
   }
 
   window_open() {
@@ -63,6 +64,7 @@ export class ProjectComponent implements OnInit {
         }
         this.project = data
         this.date = new Date(data['endDate']).toLocaleDateString()
+        this.titleService.setTitle(data["name"])
       },
       error: error => { console.log(error); }
     });
